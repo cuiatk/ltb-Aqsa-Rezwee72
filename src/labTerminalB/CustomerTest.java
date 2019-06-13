@@ -37,9 +37,10 @@ public class CustomerTest {
 	@Test
 	public void ShouldSumVariousRentals() {
 		me2.addRental(new Rental(m2,2));
-		me2.addRental(new Rental(m1,1));
 		me2.addRental(new Rental(m3,3));
-		assertEquals(me2.statment(),me2.statment());
+		me2.addRental(new Rental(m1,1));
+		
+		assertEquals(me2.statment(),me2.statement());
 	}
 
 }

@@ -30,14 +30,19 @@ public class Customer {
 		 * TODO 3		10 Marks
 		 * Provide suitable specification for statement method 
 		 */
+		/*taking amount from user
+		 * calculate the rental elements
+		 * check the elements 
+		 * generate the output
+		 */
 		public String statement() {
 		double totalAmount = 0;
 		int frequentRenterPoints = 0;
-		Enumeration<Rental> rentals = rentals.elements();
+		Rental rental_element = rental_element.nextElement();
 		String result = "Rental Record for " + getName() + "\n";
-		while (rentals.hasMoreElements()) {
+		while (rental_element.hasMoreElements()) {
 			double thisAmount = 0;
-			Rental each = (Rental) rentals.nextElement();
+			Rental each = (Rental) rental_element.nextElement();
 			//determine amounts for each line
 			switch (each.getMovie().getPriceCode()) {
 			case Movie.REGULAR:
@@ -73,4 +78,16 @@ public class Customer {
 		" frequent renter points";
 		return result;
 	}
+		public Object statment() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public Object statement1() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public Object statement2() {
+			// TODO Auto-generated method stub
+			return null;
+		}
 }

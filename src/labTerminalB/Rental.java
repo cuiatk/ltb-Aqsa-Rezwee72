@@ -13,4 +13,12 @@ public class Rental {
 	public Movie getMovie() {
 		return _movie;
 	}
+	public boolean hasMoreElements() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	public Rental nextElement() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
