@@ -33,7 +33,7 @@ public class Customer {
 		public String statement() {
 		double totalAmount = 0;
 		int frequentRenterPoints = 0;
-		Enumeration<Rental> rentals = _rentals.elements();
+		Enumeration<Rental> rentals = rentals.elements();
 		String result = "Rental Record for " + getName() + "\n";
 		while (rentals.hasMoreElements()) {
 			double thisAmount = 0;
