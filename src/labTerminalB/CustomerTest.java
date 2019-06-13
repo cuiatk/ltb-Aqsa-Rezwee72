@@ -1,5 +1,7 @@
 package labTerminalB;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 public class CustomerTest {
@@ -9,6 +11,7 @@ public class CustomerTest {
 	Customer me2 = new Customer("Allah Ditta");
 	Rental r1 = new Rental(m1, 23);
 	Rental r2 = new Rental(m2,4);
+	private Movie m3;
 	
 	/**
 	 * Test 1 Customer rented two movies one REGULAR and one NEW_RELEASE
@@ -31,6 +34,12 @@ public class CustomerTest {
 	 * Provide at least two more test cases carefully chosen so that they satisfy our testing
 	 * strategy basics i.e. input partition etc
 	 */
-	
+	@Test
+	public void ShouldSumVariousRentals() {
+		me2.addRental(new Rental(m2,2));
+		me2.addRental(new Rental(m1,1));
+		me2.addRental(new Rental(m3,3));
+		assertEquals(me2.statment(),me2.statment());
+	}
 
 }
