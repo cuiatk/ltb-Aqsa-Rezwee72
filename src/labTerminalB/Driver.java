@@ -1,4 +1,5 @@
 package labTerminalB;
+import java.util.regex.Matcher;
 
 public class Driver {
 	/*
@@ -11,10 +12,12 @@ public class Driver {
 	 */
 	public static void main(String[] args) {
 		String input = "The <b>Good</b>, the <i>Bad</i>, and the <strong>Ugly</strong>";
-		String regex = "TODO 1";
+		String regex = "<[^>]*>"+"(Good|Bad|Ugly)"+"<[^>]*>";
+		
 		String output = input.replaceAll(regex, "");
 		System.out.println(output);
-		
+		String stripped=input.replaceAll("<[^>]*>","");
+		System.out.println(stripped);
 		
 		Movie m1 = new Movie("Spancer", 0);
 		Movie m2 = new Movie("Speed", 1);
